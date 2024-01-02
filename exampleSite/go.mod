@@ -1,6 +1,6 @@
-module github.com/stefma/hugo-fresh/docs
+module github.com/StefMa/hugo-fresh/exampleSite
 
-go 1.15
+go 1.12
 
 replace github.com/StefMa/hugo-fresh => ../
 

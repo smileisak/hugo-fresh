@@ -6,9 +6,20 @@ include_footer: false
 ---
 
 ## Customize the landing page
-There's a wide variety of customizations that you can make to your Hugo Fresh landing page by modifying the `config.yaml` file that you downloaded.
+There's a wide variety of customizations that you can make to your Hugo Fresh landing page by modifying the `hugo.yaml` file that you downloaded.
 
-### navbarlogo
+> **Note**: There is always an up-to-date config file at [`exampleSite/hugo.yaml`](https://github.com/StefMa/hugo-fresh/blob/master/exampleSite/hugo.yaml) that contains all possible configurations.
+Please make sure you check them out as well.
+
+{{< title4 preloader >}}
+Preloader ensures images are loaded before displaying to the user.
+If you don't want it, set it to `false`.
+
+```yaml
+preloader: false
+```
+
+{{< title4 navbarlogo >}}
 Define the logo of the navigation bar in the upper left corner.
 
 <details>
@@ -22,7 +33,7 @@ navbarlogo:
 
 </details>
 
-### font
+{{< title4 font >}}
 Set the font of the site.
 
 <details>
@@ -36,7 +47,7 @@ font:
 
 </details>
 
-### hero
+{{< title4 hero >}}
 The "main" page which you see when you open the website.
 
 <details>
@@ -50,17 +61,23 @@ hero:
   buttonlink: "#"
   image: illustrations/worker.svg
   # Footer logos (from static/images/logos/clients/*.svg)
+  # urls are optional
   clientlogos:
-  - systek
-  - tribe
-  - kromo
-  - infinite
-  - gutwork
+  - logo: systek
+    url: https://google.com
+  - logo: tribe
+    url: https://stefma.github.io/hugo-fresh/
+  - logo: kromo
+    url: https://github.com/StefMa/hugo-fresh
+  - logo: infinite
+    url: https://hugo-fresh.vercel.app/
+  - logo: gutwork
+    url: https://bulma.io/
 ```
 
 </details>
 
-### navbar
+{{< title4 navbar >}}
 The navigation bar which is at the top of the site.
 For a dropdown, add a "sublinks" list.
 
@@ -90,7 +107,7 @@ navbar:
 
 </details>
 
-### sidebar
+{{< title4 sidebar >}}
 The sidebar is an optional parameter where you can place even more navigation items.
 
 <details>
@@ -135,7 +152,7 @@ sidebar:
 
 </details>
 
-### section1
+{{< title4 section1 >}}
 Describes the second "page" which you will see when you scroll down. Currently it will have **always** three `titles`.
 
 <details>
@@ -165,7 +182,7 @@ section1:
 
 </details>
 
-### section2
+{{< title4 section2 >}}
 Shows information why someone should use this product.
 
 <details>
@@ -190,7 +207,7 @@ section2:
 
 </details>
 
-### section3
+{{< title4 section3 >}}
 Display a bright image of your product.
 
 <details>
@@ -207,7 +224,7 @@ section3:
 
 </details>
 
-### section4
+{{< title4 section4 >}}
 What clients says about us.
 
 <details>
@@ -234,19 +251,24 @@ section4:
 
 </details>
 
-### section5
+{{< title4 section5 >}}
 Write us.
 
 <details>
 <summary>Code</summary>
 
 ```yaml
-section5: true # or false to hide it
+section5:
+  title: Drop us a line or two
+  subtitle: We'd love to hear from you
+  buttonText: Send Message
+  action: https://formspree.io/f/{ID}
+  method: POST
 ```
 
 </details>
 
-### footer
+{{< title4 footer >}}
 The footer of the site.
 
 <details>
