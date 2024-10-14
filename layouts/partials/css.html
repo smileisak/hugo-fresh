@@ -2,7 +2,7 @@
 {{- $sass         := "style.sass" }}
 {{- $cssTarget    := "css/style.css" }}
 {{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-{{- $fontName     := .Site.Params.font.name | default "Raleway" }}
+{{- $fontName     := .Site.Params.font.name | default "Space Grotesk" }}
 {{- $fontFace     := replace $fontName " " "+" }}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s&display=swap" $fontFace $fontSizes }}
@@ -21,4 +21,4 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
 />
-<link href='https://fonts.googleapis.com/css?family=Raleway&display=swap' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Space Grotesk&display=swap' rel='stylesheet' type='text/css'>
